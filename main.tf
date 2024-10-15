@@ -17,8 +17,14 @@ resource "aws_instance" "naruto_server" {
   ami           = "ami-0866a3c8686eaeeba"
   instance_type = "t2.micro"
   key_name = "naruto-iac"
+ # user_data = <<-EOF
+ #                #!/bin/bash
+ #                cd /home/ubuntu
+ #                echo "<h1>Feito com terraform</h1>" > index.html
+ #                nohup busybox httpd -f -p 8080 &
+ #                EOF
 
   tags = {
-    Name = "naruto-ec2"
+    Name = "naruto-ec2-1"
   }
 }

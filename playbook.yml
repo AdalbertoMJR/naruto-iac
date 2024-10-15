@@ -1,0 +1,8 @@
+- hosts: naruto-iac
+  tasks:
+    - name: Instalando python3, virtualenv
+      apt:
+        pkg:
+        - python3
+        - virtualenv
+        
